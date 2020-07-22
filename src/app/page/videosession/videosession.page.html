@@ -1,0 +1,44 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>videosession</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h4 class="text_color textleft" style="margin-bottom: 0px;" (click)="onExit()"> Exit Session </h4>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!startvideocall">
+      <ion-col>
+        <div [ngStyle]="{'background-image': 'url('+ user_image +')'}" class="imgsection overlay">
+          <h4 class="img-text"> Video Chat start in </h4>
+          <h3 class="img-text"> {{currentCallWaitingTime}} </h3>
+          <h4 class="img-text"> Introduce Yourself and tell about your favorite holiday destition</h4>
+        </div>
+        <h4 class="username">
+          {{user_full_name}}, {{user_age}}<br />
+        </h4>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="startvideocall">
+      <ion-col>
+        <h4 class="time"> Time Remaining : {{startcount}} seconds </h4>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<div *ngIf="showVideoScreen">
+    <div id="publisher" style="width: 30%; height: 20%; position: absolute; bottom: 0; right: 0; z-index: 1000; pointer-events:none;"></div>
+    <div *ngIf="showVideoScreen" id="subscriber" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 500; pointer-events:none;"></div>
+  </div>-->
+
+  <div *ngIf="!showVideoScreen || showVideoScreen">
+    <div id="publisher" style="width: 30%; height: 20%; position: absolute; bottom: 0; right: 0; z-index: 1000; pointer-events:none;"></div>
+    <div id="subscriber" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 500; pointer-events:none;"></div>
+  </div>
+  
+</ion-content>

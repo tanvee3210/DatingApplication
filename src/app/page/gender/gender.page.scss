@@ -1,0 +1,58 @@
+ion-content{
+    --background: url(../../../assets/images/Background.png)0 0/100% 100%; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover
+}
+
+ion-input{
+    border-bottom: 1px solid #fff ;
+}
+::placeholder {
+    color: white;
+  }
+.padding-top{
+    padding-top: 10px;
+}
+
+.ion-grid{
+    position: absolute;
+    top: 9%;
+}
+
+.imgclass{
+   
+position: fixed;
+    bottom: 0px;
+}
+
+.text-color{
+    color: white;
+}
+
+.img-height{
+    height: 7em;
+    margin-top: 5em;
+}
+
+.gender-image{
+    height: 11em;
+    margin-top: 2em;
+}
+.profilelogo{
+    height: 5em;
+}
+.gender-text{
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color: white;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 11px;
+}
+.gender-prefer{
+    height: 10em;
+    margin-top: 3em;
+}

@@ -1,0 +1,125 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="coltext">
+        <p class="chat-text">
+          Settings
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="justify-content: center;">
+      <img src="{{currentImage}}" style="
+        object-fit: cover; height: 15vh; border-radius: 10px; width: 15vh;" />
+      <div style="margin-left: -62px;margin-top: -9px;" (click)="openCameraOption()">
+        <ion-icon name="create" class="editicon"></ion-icon>
+      </div>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center size="12">
+        <p class="username">
+          {{username}}, {{user_age}}
+        </p>
+      </ion-col>
+      <ion-col text-center size="12">
+        <p class="subscribe">
+          Subscribe to Nile Plus
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" class="coltext">
+        <p class="textmargin"> I am looking for </p>
+      </ion-col>
+      <ion-col size="6" class="coltext">
+        <p class="textmargin"> Men </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-title>
+          <ion-toggle *ngIf="selectedSexPreference == 'Male'" class="right" checked>
+          </ion-toggle>
+          <ion-toggle (click)="updateSexPref('Male')" *ngIf="selectedSexPreference !== 'Male'" class="right">
+          </ion-toggle>
+        </ion-title>
+      </ion-col>
+
+      <ion-col size="6" class="coltext">
+        <p class="textmargin"> Women </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-title>
+          <ion-toggle *ngIf="selectedSexPreference == 'Female'" class="right" checked>
+          </ion-toggle>
+          <ion-toggle (click)="updateSexPref('Female')" *ngIf="selectedSexPreference !== 'Female'" class="right">
+          </ion-toggle>
+        </ion-title>
+      </ion-col>
+
+      <ion-col size="6" class="coltext">
+        <p class="textmargin"> Both </p>
+      </ion-col>
+      <ion-col size="6">
+        <ion-title>
+          <ion-toggle *ngIf="selectedSexPreference == 'Both'" class="right" checked>
+          </ion-toggle>
+          <ion-toggle (click)="updateSexPref('Both')" *ngIf="selectedSexPreference !== 'Both'" class="right">
+          </ion-toggle>
+        </ion-title>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="coltext" style="width: 100%;">
+        <p class="textmargin1">Distance </p>
+      </ion-col>
+    </ion-row>
+    <ion-range id="single-range" min="0" max="15000 " [(ngModel)]="distance" pin color="light" class="agerange">
+    </ion-range>
+    <ion-row>
+      <ion-col class="coltext" size="6">
+        <p class="textmargin1">Age </p>
+      </ion-col>
+
+      <ion-col size="6">
+        <p class="agetext"> {{userage}} </p>
+      </ion-col>
+      <ion-range id="dual-range" [(ngModel)]="age" dual-knobs="true" min="18" max="60" pin color="light"
+        class="agerange">
+      </ion-range>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="Logout()" expand="block" class="logout">Log Out</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="onDelete()" expand="block" class="logout">Delete Account</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- <ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" text-center>
+        <p class="buttom" (click)="userlogin()"><img
+            src="../../../assets/images/136-1366211_group-of-10-guys-login-user-icon-png.png" class="image" /> </p>
+      </ion-col>
+      <ion-col size="4" text-center>
+        <p class="buttom" (click)="homepage()"> <img src="../../../assets/images/Home.png" class="image" /> </p>
+      </ion-col>
+      <ion-col size="4" text-center>
+        <p class="buttom" (click)="chatpage()"> <img src="../../../assets/images/Chat.png" class="image" /> </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer> -->

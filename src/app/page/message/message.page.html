@@ -1,0 +1,74 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar class="ion-no-border">
+    <ion-buttons slot="start">
+      <ion-back-button color="dark" defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-label class="label1">
+      <ion-avatar>
+        <img src="{{receiver.user_image}}" class="userprofile receiver-profile-img">
+      </ion-avatar>
+      <h5 class="username">{{receiver.full_name}}</h5>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- new -->
+  <div id="chat-parent" class="bg-image" [ngClass]="{ 'bg-image-X': phone_model=='iPhone X'}">
+    <ion-button *ngIf="!noMoreData" (click)="loadMore()" expand="block">
+      Load More
+    </ion-button>
+    <div id="chat-container">
+      <ion-row *ngFor="let chat of api_service.selectedUserChatlist; let i = index;" class="full no-padding">
+        <ion-col class="no-padding chat-row" [ngClass]="{ 'reverse': isSender(chat.senderid) }">
+          <div class="avatar-parent">
+            <div class="avatar-border"></div>
+            <img *ngIf="!isSender(chat.senderid)" src="{{receiver.user_image}}" class="avatar receiver-profile-img">
+          </div>
+          <div
+            [ngClass]="{ 'name-row-parent-right': isSender(chat.senderid),'name-row-parent-left': !isSender(chat.senderid)}">
+            <div class="no-padding"
+              [ngClass]="{ 'name-row-right': isSender(chat.senderid),'name-row-left': !isSender(chat.senderid)}">
+              <!--{{isSender(chat.senderid) ? sender.full_name: receiver.full_name}}-->
+              <!-- {{isSender(chat.senderid) ? '': receiver.full_name}} -->
+              <div [ngClass]="{ 'timer-right': isSender(chat.senderid),'timer-left': !isSender(chat.senderid)}">
+                {{timeSince(chat.datetime)}}
+                ago
+              </div>
+              <div
+                [ngClass]="{ 'reverse-arc-right': isSender(chat.senderid),'reverse-arc-left': !isSender(chat.senderid)}">
+                <div
+                  [ngClass]="{ 'reverse-arc-color-right': isSender(chat.senderid),'reverse-arc-color-left': !isSender(chat.senderid)}">
+                </div>
+              </div>
+            </div>
+            <div class="no-padding"
+              [ngClass]="{ 'message-row-right': isSender(chat.senderid),'message-row-left': !isSender(chat.senderid)}">
+              <ion-text no-margin class="text message-text">{{toJSON(chat.message)}}</ion-text>
+            </div>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <!-- <ion-row class="message_row no-padding">
+    <ion-col size="12" class="input">
+      <ion-item lines="none" style="  --ion-background-color:transparent; margin-bottom: 15px;">
+        <ion-input type="text" placeholder="Message" [(ngModel)]="message" class="ion-no-padding"></ion-input>
+        <ion-icon name="send" expand="icon-only" slot="end" (click)="sendMessage()" class="send"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row> -->
+</ion-content>
+<ion-footer>
+  <ion-row class="no-padding">
+    <ion-col size="12" class="input">
+      <ion-item lines="none" style="  --ion-background-color:transparent;">
+        <ion-input type="text" placeholder="Message" [(ngModel)]="message" class="ion-no-padding"></ion-input>
+        <ion-icon name="send" expand="icon-only" slot="end" (click)="sendMessage()" class="send"></ion-icon>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-footer>

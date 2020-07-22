@@ -1,0 +1,39 @@
+ion-content {
+    --background: url(../../../assets/images/Background.png)0 0/100% 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover
+}
+
+.imgclass {
+    position: fixed;
+    bottom: 0px;
+}
+
+.img-height {
+    height: 7em;
+    margin-top: 3.5em;
+}
+
+.padding{
+    padding: 10px;
+}
+
+.emailtext {
+    color: white;
+    font-size: 14px;
+}
+
+.padding-left {
+    padding-left: 2em;
+    padding-right: 3em;
+}
+
+.img-icon {
+    height: 15px;
+    width: 20px;
+}
+
+.input.native-input.sc-ion-input-md {
+    padding: 10px;
+}

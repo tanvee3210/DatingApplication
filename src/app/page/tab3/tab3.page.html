@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="coltext">
+        <p class="chat-text">
+          Chat
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<ion-row class="sliders" *ngIf="userlist.length > 0 && showSlider">
+    <ion-slides class="slides" [options]="slideOpts1">
+      <ion-slide class="ion-slide" *ngFor="let list of userlist; let i = index;">
+        <ion-avatar>
+          <img src="{{list.user_image}}" (click)="onMessage(i)">
+        </ion-avatar>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>-->
+  <ion-row *ngIf="userlist2.length > 0 && showSlider">
+    <div class="slider-img" *ngFor="let list of userlist2; let i = index;">
+      <ion-avatar class="slideavatar">
+        <img src="{{list.user_image}}" (click)="onMessage(i)">
+      </ion-avatar>
+      <p class="username">{{list.full_name}}</p>
+    </div>
+  </ion-row>
+
+  <ion-list no-padding>
+    <ion-item *ngFor="let user of userlist; let i = index;" lines="none" (click)="onMessage(i)">
+      <div class="borderBottomLine"></div>
+      <div class="listSection">
+        <div class="UserimgSection">
+          <ion-avatar class="chatImage" slot="start">
+            <img src="{{user.user_image}}">
+            <!-- <span class="onlineOffline_icon"
+              [ngStyle]="{'background-color':(chat.status === 'online'? '#4cd137' : '#c23616')}"></span> -->
+          </ion-avatar>
+        </div>
+        <div class="usernameSection" padding-start padding>
+          <h5>
+            {{user.full_name}}
+          </h5>
+          <p class="descText" no-margin no-padding>{{toJSON(user.lastchat.message)}}</p>
+        </div>
+      </div>
+      <div slot="end" class="lastSection">
+        <ion-note class="sendTime">{{user.lastchat.datetime | date: "shortTime"}}</ion-note>
+        <ion-badge slot="end" class="userBadge" *ngIf="user.unreadcount > 0">{{user.unreadcount}}</ion-badge>
+        <!-- <ion-note slot="end" *ngIf="user.lastchat.datetime">{{user.lastchat.datetime}}</ion-note> -->
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

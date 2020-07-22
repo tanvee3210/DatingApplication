@@ -1,0 +1,21 @@
+<!-- select gender name  -->
+<ion-content>
+  <ion-grid class="ion-grid">
+    <ion-row>
+      <ion-col text-center>
+        <img src="../../../assets/images/LogoGender.png" class="gender-image" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <p class="gender"> Gender </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center size="12" *ngFor="let data of gender">
+        <p class="gender-text" (click)="genderData(data)"> {{data.name}} </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <p><img src="../../../assets/images/Bottom.png" class="imgclass" /> </p>
+</ion-content>

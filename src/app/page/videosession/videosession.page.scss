@@ -1,0 +1,67 @@
+ion-content {
+    --background: url(../../../assets/images/ChatBack.png)0 0/100% 100%;
+}
+.img-text{
+    text-align: center;
+    font-size: 21px;
+    color: white;
+    padding-top: 3em;
+}
+.time{
+    margin-top: 0px;
+    /* margin-left: 30px; */
+    color: white;
+    text-align: center;
+}
+.imgsection{
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+.imgcount{
+    text-align: center;
+    font-size: 21px;
+    color: white;
+    padding-top: 6em;
+}
+.introducetext{
+    position: absolute;
+    top:58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.imgsection::before{
+    background-color: black;
+}  
+.secondintroducetext{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.username{
+    background-color: white;
+    margin-top: 0px;
+    padding-bottom: 21px;
+    padding-top: 10px;
+    padding-left: 5px;
+    text-transform: capitalize;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+}
+.overlay::before{
+    background-color: rgba(0, 1, 6, 0.8);
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}

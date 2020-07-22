@@ -1,0 +1,42 @@
+
+ion-content{
+  --background: url(../../../assets/images/Background.png)0 0/100% 100%; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover
+  }
+
+  .locationimage{
+    height: 10em;
+    margin-top: 3em;
+  }
+
+  .icon-location{
+    height: 5em;
+  }
+  
+
+  .locationtext{
+    font-weight: 600;
+    font-size: 17px;
+  }
+.imgclass{
+  position: fixed;
+    bottom: 0px;
+}
+
+.button-class{
+    padding-right: 2.5em;
+    padding-left:2.5em;
+}
+
+
+.ion-grid{
+  position: absolute;
+  top:11%;
+  }
+
+.moretext{
+    color: white;
+    text-decoration: underline;
+}

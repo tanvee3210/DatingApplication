@@ -1,0 +1,44 @@
+// ion-content{
+//     --background: url(../../../assets/images/HomeBg.png)0 0/100% 100%;    
+// }
+
+
+ion-content{
+    --background: url(../../../assets/images/HomeBg.png)0 0/100% 104%;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+
+.buttom{
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+.image{
+    height: 20px;
+}
+
+.headertext{
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin-top: 2em;
+}
+.nearby{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin: 0px    
+}
+
+.startsession{
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 12px;
+    margin-left: 4em;
+    margin-right: 4em;
+    color: white;
+    font-weight: 600;
+    margin-top: 2em;
+}

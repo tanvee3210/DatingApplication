@@ -1,0 +1,32 @@
+<ion-content>
+
+  <ion-grid class="ion-grid">
+    <ion-row>
+      <ion-col text-center>
+        <img src="../../../assets/images/LogoUni.png" class="img-size">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        <h3 class=" margin"> University Name </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="padding-left">
+        <ion-item lines="none" class="border">
+          <ion-input type="text" [(ngModel)]="Universityname"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 14px;">
+      <ion-col class="padding-left">
+        <img src="../../../assets/images/submit.png" (click)="gotolocationpage()">
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <p><img src="../../../assets/images/Bottom.png" class="imgclass" /> </p>
+
+</ion-content>

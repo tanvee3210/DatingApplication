@@ -1,0 +1,44 @@
+<!-- user name and age -->
+
+<ion-content style="position: relative;">
+    <ion-grid class="ion-grid">
+        <canvas id="myCanvas" crossorigin="anonymous" style="display:none;"></canvas>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <img src="../../../assets/images/LogoPhoto.png" class="img-height" />
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-input type="email" name="emailaddress" [(ngModel)]="username" placeholder="Name"
+                    style="color: #fff;"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="padding-top">
+            <ion-col>
+                <ion-input type="number" [(ngModel)]="userage" placeholder="Age" style="color: #fff;"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <p class="ion-text-center" class="text-color"> Choose Profile Picture </p>
+                <p (click)="openCameraOption()" style="display: none;"> </p>
+                <p class="ion-text-center" *ngIf="currentImage"> <img src="{{currentImage}}" class="profilelogo border"
+                        id="profile_image_id" (click)="openCameraOption()" /> </p>
+                <p class="ion-text-center" *ngIf="!currentImage"> <img src="../../../assets/images/userlogo.png"
+                        (click)="openCameraOption()" class="profilelogo" /> </p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <img src="../../../assets/images/NEXT.png" (click)="goToNext()" class="butnimg" />
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="bottomimg">
+            <img src="../../../assets/images/Bottom.png" class="imgclass" />
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,36 @@
+ion-content{
+    --background: url(../../../assets/images/Background.png)0 0/100% 100%; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover
+}
+
+ion-input{
+    border-bottom: 1px solid #fff ;
+}
+  .img-size{
+    height: 8em;
+    margin-top: 3em;
+  }
+
+  .imgclass{
+    position: fixed;
+    bottom: 0px;
+}
+.padding-left{
+    padding-left: 2em;
+    padding-right: 3em;
+}
+.border{
+    border-radius: 8px;
+    height: 40px;
+}
+.margin{
+    margin-top: 3em;
+    color: white;
+}
+
+.ion-grid{
+    position: absolute;
+    top: 11%;
+    }

@@ -1,0 +1,7 @@
+{
+  "name": "seconddatingapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

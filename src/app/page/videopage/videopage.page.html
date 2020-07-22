@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>videopage</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div *ngIf="!searchfunction">
+    <p class="startsession" (click)="showuserdata()"> Cancel Searching </p>
+    <p text-center class="imgsize">
+      <img src="../../../assets/images/search.png">
+    </p>
+    <p *ngIf="firstuserimage"> <img src="{{firstuserimage}}" class="userimage">
+    </p>
+    <p *ngIf="seconduserimage"> <img src="{{seconduserimage}}" class="userimage2">
+    </p>
+
+    <p *ngIf="thireduserimage"> <img src="{{thireduserimage}}" class="userimage3">
+    </p>
+    <!-- <p> <img src="../../../assets/images/user2.png" class="userimage4">
+    </p> -->
+
+    <!-- <p> <img src="../../../assets/images/user2.png" class="userimage5">
+    </p> -->
+
+  </div>
+
+  <ion-grid *ngIf="searchfunction">
+    <ion-row>
+      <ion-col>
+        <h4 text-center class="text_color"> Session starts in </h4>
+        <h4 text-center class="text_color"> 3 </h4>
+        <h4 text-center class="text_color"> People in your session </h4>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6" text-center *ngIf="firstuserimage">
+        <img src="{{firstuserimage}}" class="imgsize1" />
+      </ion-col>
+      <ion-col size="6" text-center *ngIf="seconduserimage">
+        <img src="{{seconduserimage}}" class="imgsize1" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" text-center *ngIf="thireduserimage">
+        <img src="{{thireduserimage}}" class="imgsize1" />
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <p class="startsession margin" (click)="findnewuser()"> Find New Session </p>
+      </ion-col>
+      <ion-col size="6">
+        <p class="startsession margin" (click)="gotovideosession()"> Continue Session </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" class="padding-left" text-center>
+        <p class="startsession margin" (click)="homepage()"> Go to Home Page </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

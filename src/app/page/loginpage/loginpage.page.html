@@ -1,0 +1,149 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <img src="../../../assets/images/LogoJoin.png" class="img-height" />
+                <p class="ion-text-center" class="text-color"> By logging in or signing up,You are agreeing to Topspot"s
+                    terms and
+                    conditions </p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="paddingrow">
+            <ion-col size="12" class="background">
+                <p class="user-text">
+                    <span class="olduser" id="olduser" (click)="Existinguser()"> Existing </span>
+                    <span class="newuser" id="newuser" (click)="Newuser()">&nbsp;&nbsp; New &nbsp; &nbsp; </span>
+            </ion-col>
+
+        </ion-row>
+
+        <!-- for existing user -->
+
+        <ion-row *ngIf="newuser">
+            <ion-col>
+                <ion-card class="card-class">
+                    <ion-card-header>
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../../assets/images/email.png" class="img-icon" />
+                            </ion-col>
+                            <ion-col size="10">
+                                <ion-input placeholder="Email Address" [(ngModel)]="email"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                        <hr class="buttom-line">
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../../assets/images/password.png" class="img-icon" />
+                            </ion-col>
+                            <ion-col size="8">
+                                <ion-input type={{inputpassword}} [(ngModel)]="password" placeholder="Password">
+                                </ion-input>
+                            </ion-col>
+                            <ion-col class="index" size="2" *ngIf="hideicon" (click)="showicon('1')"
+                                class="ion-text-center">
+                                <ion-icon name="eye-off" class="look-icon">
+                                </ion-icon>
+                            </ion-col>
+                            <ion-col size="2" class="index" *ngIf="!hideicon" (click)="againhideicon('1')"
+                                class="ion-text-center">
+                                <ion-icon name="eye" class="look-icon">
+                                </ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-header>
+                </ion-card>
+                <ion-row>
+                    <ion-col class="ion-text-center">
+                        <p>
+                            <img src="../../../assets/images/login.png" (click)="loginuser()" class="imgsize" />
+                        </p>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+        <!-- for new user -->
+        <ion-row *ngIf="!newuser">
+            <ion-col>
+                <ion-card class="card-class">
+                    <ion-card-header>
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../../assets/images/email.png" class="img-icon" />
+                            </ion-col>
+                            <ion-col size="10">
+                                <ion-input type="text" [(ngModel)]="newemail" placeholder="Email Address"></ion-input>
+                            </ion-col>
+                        </ion-row>
+                        <hr class="buttom-line">
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../../assets/images/password.png" class="img-icon" />
+                            </ion-col>
+                            <ion-col size="8">
+                                <ion-input type={{inputpassword1}} [(ngModel)]="newpassword" placeholder="Password">
+                                </ion-input>
+                            </ion-col>
+                            <ion-col class="index" size="2" *ngIf="hideicon2" (click)="showicon('2')"
+                                class="ion-text-center">
+                                <ion-icon name="eye-off" class="look-icon">
+                                </ion-icon>
+                            </ion-col>
+                            <ion-col size="2" class="index" *ngIf="!hideicon2" (click)="againhideicon('2')"
+                                class="ion-text-center">
+                                <ion-icon name="eye" class="look-icon">
+                                </ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <hr class="buttom-line">
+
+                        <ion-row>
+                            <ion-col size="2">
+                                <img src="../../../assets/images/password.png" class="img-icon" />
+                            </ion-col>
+                            <ion-col size="8">
+                                <ion-input type={{inputpassword2}} [(ngModel)]="conformpassword" placeholder="Password">
+                                </ion-input>
+                            </ion-col>
+                            <ion-col size="2" class="ion-text-center">
+                                <ion-col class="index" size="2" *ngIf="hideicon3" (click)="showicon('3')"
+                                    class="ion-text-center">
+                                    <ion-icon name="eye-off" class="look-icon">
+                                    </ion-icon>
+                                </ion-col>
+                                <ion-col size="2" class="index" *ngIf="!hideicon3" (click)="againhideicon('3')"
+                                    class="ion-text-center">
+                                    <ion-icon name="eye" class="look-icon">
+                                    </ion-icon>
+                                </ion-col>
+                            </ion-col>
+                        </ion-row>
+
+                    </ion-card-header>
+                </ion-card>
+                <ion-row>
+                    <ion-col class="ion-text-center">
+                        <p>
+                            <img src="../../../assets/images/signup.png" (click)="gotouserpage()" class="imgsize">
+                        </p>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col>
+                <p *ngIf="newuser" class="forgot-margin" class="ion-text-center" (click)="gotoforgotpage()"> <span
+                        class="forgot_text"> Forgot Password too? </span></p>
+                <p class="ion-text-center" class="colorfacebooklogin" id="ortext"> or </p>
+                <p class="ion-text-center"><img src="../../../assets/images/facebook-2-logo.png" class="facebook-icon"
+                        (click)="facebooklogin()"></p>
+                <!-- <p class="ion-text-center"><img src="../../../assets/images/facebook-2-logo.png" class="facebook-icon"
+                        (click)="facebooklogins()"></p> -->
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

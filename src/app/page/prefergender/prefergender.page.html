@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-grid class="ion-grid">
+    <ion-row>
+      <ion-col text-center>
+        <img src="../../../assets/images/LogoPrefer.png" class="gender-prefer" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <p class="gender"> Sexual Preference </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center size="12" *ngFor="let data of genderprefer">
+        <p class="gender-text" (click)="universityData(data)"> {{data.name}} </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <p><img src="../../../assets/images/Bottom.png" class="imgclass" /> </p>
+
+</ion-content>

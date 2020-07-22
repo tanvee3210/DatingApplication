@@ -1,0 +1,40 @@
+<ion-header style="display: none;">
+  <ion-toolbar id="map">
+    <ion-title>locationpage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="sc-ion-card-md-h sc-ion-card-md-s md hydrated"
+    style="margin: 4px; width: 97.8%; height: 200px; border-radius: 20px; position: relative; overflow: hidden; border: 1px solid #c1c1c1; display: none;"
+    id="map">
+  </ion-card>
+  <ion-grid class="ion-grid">
+    <ion-row>
+      <ion-col text-center>
+        <img src="../../../assets/images/LogoLocation.png" class="locationimage">
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col text-center>
+        <p class="gender locationtext"> Location Access Required </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center>
+        <img src="../../../assets/images/LocationIcon.png" class="icon-location">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <img src="../../../assets/images/location.png" (click)="gotoverificationpage()" class="button-class">
+      </ion-col>
+    </ion-row>
+    <p text-center class="moretext"> Learn More </p>
+  </ion-grid>
+  <p><img src="../../../assets/images/Bottom.png" class="imgclass" /> </p>
+</ion-content>
